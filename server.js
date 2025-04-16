@@ -2,16 +2,16 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
-const connectDB = require('./back/src/config/db')
+const connectDB = require('./src/config/db')
 
 //rutas
 
-const routerEvent = require('./back/src/api/routes/Event')
-const routerUser = require('./back/src/api/routes/User')
-const routerEventMedia = require('./back/src/api/routes/EventMedia')
-const routerFlyer = require('./back/src/api/routes/eventFlyer')
-const routerImg = require('./back/src/api/routes/eventImage')
-const routerProfileImg = require('./back/src/api/routes/profileImg')
+const routerEvent = require('./src/api/routes/Event')
+const routerUser = require('./src/api/routes/User')
+const routerEventMedia = require('./src/api/routes/EventMedia')
+const routerFlyer = require('./src/api/routes/eventFlyer')
+const routerImg = require('./src/api/routes/eventImage')
+const routerProfileImg = require('./src/api/routes/profileImg')
 
 const app = express()
 app.use(express.json())
