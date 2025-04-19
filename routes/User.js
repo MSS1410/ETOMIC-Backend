@@ -1,5 +1,5 @@
-const { isAdmin } = require('../../middlewares/admin')
-const { isAuth } = require('../../middlewares/auth')
+const { isAdmin } = require('../middlewares/admin')
+const { isAuth } = require('../middlewares/auth')
 
 const {
   getMyProfile,

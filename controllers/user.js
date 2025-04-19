@@ -1,9 +1,9 @@
 const User = require('../modelos/user')
 const bcrypt = require('bcrypt')
-const { generateToken } = require('../../util/jwt')
+const { generateToken } = require('../util/jwt')
 const jwt = require('jsonwebtoken')
 const Event = require('../modelos/Event')
-const { cloudinary } = require('../../config/cloudinary')
+const { cloudinary } = require('../config/cloudinary')
 
 const attendedEvent = async (req, res) => {
   try {

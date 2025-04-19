@@ -1,4 +1,4 @@
-const { cloudinary } = require('../../config/cloudinary')
+const { cloudinary } = require('../config/cloudinary')
 const Event = require('../modelos/Event')
 
 const updateEventImage = async (req, res) => {

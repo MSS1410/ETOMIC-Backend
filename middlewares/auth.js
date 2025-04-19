@@ -1,5 +1,5 @@
-const { attendedEvent } = require('../api/controllers/user')
-const User = require('../api/modelos/user')
+const { attendedEvent } = require('../controllers/user')
+const User = require('../modelos/user')
 const { verifyToken } = require('../util/jwt')
 
 const isAuth = async (req, res, next) => {

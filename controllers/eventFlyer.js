@@ -1,4 +1,4 @@
-const { cloudinary } = require('../../config/cloudinary')
+const { cloudinary } = require('../config/cloudinary')
 const EventMedia = require('../modelos/EventMedia')
 const Event = require('../modelos/Event')
 

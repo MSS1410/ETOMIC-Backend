@@ -1,9 +1,9 @@
 const express = require('express')
 
-const { isAuth } = require('../../middlewares/auth')
+const { isAuth } = require('../middlewares/auth')
 
-const { isEditor } = require('../../middlewares/isEditor')
-const { upload } = require('../../config/cloudinary')
+const { isEditor } = require('../middlewares/isEditor')
+const { upload } = require('../config/cloudinary')
 const { updateEventImage } = require('../controllers/eventImage')
 
 //actualizar img evento

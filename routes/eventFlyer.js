@@ -1,6 +1,6 @@
-const { isAdmin } = require('../../middlewares/admin')
-const { isAuth } = require('../../middlewares/auth')
-const { upload } = require('../../config/cloudinary')
+const { isAdmin } = require('../middlewares/admin')
+const { isAuth } = require('../middlewares/auth')
+const { upload } = require('../config/cloudinary')
 const { uploadFlyer, deleteFlyer } = require('../controllers/eventFlyer')
 
 const routerFlyer = require('express').Router()

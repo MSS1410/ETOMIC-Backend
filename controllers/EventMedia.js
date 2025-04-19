@@ -1,6 +1,6 @@
 const EventMedia = require('../modelos/EventMedia')
 const Event = require('../modelos/Event')
-const { cloudinary } = require('../../config/cloudinary')
+const { cloudinary } = require('../config/cloudinary')
 
 const uploadEventMedia = async (req, res) => {
   try {
