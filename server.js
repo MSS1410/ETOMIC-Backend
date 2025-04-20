@@ -16,7 +16,7 @@ const routerProfileImg = require('./routes/profileImg')
 const app = express()
 app.use(express.json())
 
-const PORT = 3050
+const PORT = 3051
 connectDB()
 app.use(cors())
 
@@ -29,11 +29,20 @@ app.use('/api/v1/flyer-media', routerFlyer)
 app.use('/api/v1/event-img', routerImg)
 app.use('/api/v1/users/profile', routerProfileImg)
 
-app.use((req, res, next) => {
-  res
-    .status(404)
-    .json({ message: '... ETOMIC - Electronic Techno Music Events' })
+//??????
+const path = require('path')
+const FRONT_PATH = path.join(__dirname, '..', 'front')
+
+app.use(express.static(FRONT_PATH))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(FRONT_PATH, 'index.html'))
 })
+
+// app.use((req, res, next) => {
+//   res
+//     .status(404)
+//     .json({ message: '... ETOMIC - Electronic Techno Music Events' })
+// })
 
 //500
 app.use((err, req, res, next) => {
