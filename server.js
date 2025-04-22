@@ -38,16 +38,10 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(FRONT_PATH, 'index.html'))
 })
 
-// app.use((req, res, next) => {
-//   res
-//     .status(404)
-//     .json({ message: '... ETOMIC - Electronic Techno Music Events' })
-// })
-
 //500
 app.use((err, req, res, next) => {
-  console.error(err.stack)
-  res.status(500).json({ message: 'Intern issue' })
+  console.error(err)
+  res.status(500).json({ message: err.message, stack: err.stack })
 })
 
 app.listen(PORT, () => {
