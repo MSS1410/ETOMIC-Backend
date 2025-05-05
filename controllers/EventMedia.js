@@ -26,7 +26,7 @@ const uploadEventMedia = async (req, res) => {
 
     // le cambio el .includes por .some, ya que tengo que pasar los attendes a string para realizar la comparacion de role.
     // porque? en la bbdd los IDs de los asistentrs los guardo como objectId y req.user.id es string, comparar con includes puede fallar porque ObjectId != string
-    if (event.attendees.some((att) => att.toString() === req.user.id)) {
+    if (!event.attendees.some((att) => att.toString() === req.user.id)) {
       return res
         .status(403)
         .json({ message: "You should've attended the event to post an image" })

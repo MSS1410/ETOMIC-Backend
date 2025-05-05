@@ -37,7 +37,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: err.message, stack: err.stack })
 })
 
-const PORT = process.env.PORT || 3059
+const PORT = process.env.PORT || 3060
 app.listen(PORT, () => {
   console.log(`🎧🎭 ETOMIC  en: http://localhost:${PORT}`)
 })
