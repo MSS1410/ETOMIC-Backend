@@ -17,8 +17,8 @@ const app = express()
 
 //middlewares
 app.use(express.json())
-app.use(cors({ origin: '*' })) // permite peticiones desde el front
-
+app.use(cors()) // permite peticiones desde el front
+app.options('*', cors())
 //bd
 connectDB()
 
@@ -37,7 +37,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: err.message, stack: err.stack })
 })
 
-const PORT = process.env.PORT || 3056
+const PORT = process.env.PORT || 3059
 app.listen(PORT, () => {
   console.log(`🎧🎭 ETOMIC  en: http://localhost:${PORT}`)
 })
